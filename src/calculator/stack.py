@@ -239,3 +239,34 @@ def max_sum(numbers, k):
         best = max(best, window_sum)
 
     return best
+
+#levelorder
+from collections import deque
+
+def level_order(root):
+
+    if root is None:
+        return
+
+    queue = deque([root])
+
+    while queue:
+
+        node = queue.popleft()
+
+        print(node.value)
+
+        if node.left:
+            queue.append(node.left)
+
+        if node.right:
+            queue.append(node.right)
+#binary search tree search algorithm
+def search(root,target):
+    if root is None:
+        return None
+    if root.value==target:
+        return root
+    elif root.value<target:
+        return search(root.left,target)
+    return search(root.right,target)
