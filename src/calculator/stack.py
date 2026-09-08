@@ -270,3 +270,17 @@ def search(root,target):
     elif root.value<target:
         return search(root.left,target)
     return search(root.right,target)
+#buttom up approch for recurion instead in dynamic programing 
+def fib(n):
+
+    if n <= 1:
+        return n
+
+    dp = [0] * (n + 1)
+
+    dp[1] = 1
+
+    for i in range(2, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]
+
+    return dp[n]   
