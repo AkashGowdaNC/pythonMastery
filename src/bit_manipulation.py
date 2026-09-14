@@ -26,3 +26,4 @@ Count set bits	n.bit_count()
 Left shift	n << k
 Right shift	n >> k
 """
+"""another one lesson was there then thats the end of python"""
