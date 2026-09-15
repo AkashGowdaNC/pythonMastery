@@ -27,3 +27,13 @@ Left shift	n << k
 Right shift	n >> k
 """
 """another one lesson was there then thats the end of python"""
+numbers = [1, 5, 8, 2, 9]
+target = 10
+# Improve this from O(n²) to approximately O(n):
+num_dict = {}
+for i, num in enumerate(numbers):
+    complement = target - num
+    if complement in num_dict:
+        print(f"Indices: {num_dict[complement]}, {i}")
+        break
+    num_dict[num] = i
